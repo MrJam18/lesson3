@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum(a, b) {
+            return a + b;
+        }
+        function dif(a, b) {
+            return a - b;
+        }
+        function multi(a, b) {
+            return a * b;
+        }
+        function div(a, b) {
+            return a / b;
+        }
+        a = +prompt("Введите значение а");
+        b = +prompt("Введите значение b");
+        operation = prompt("укажите, какую операцию требуется провести (поддерживаются только знаки +, -, *, /)")
+        if (isNaN(a) || isNaN(b)) {
+            alert("пожалуйста введите значения а и b в цифрах!")
+            throw new Error("пожалуйста введите значения а и b в цифрах!")
+        }
+
+        switch (operation) {
+            case "+":
+                alert("сумма чисел а и b равна " + sum(a, b))
+                break;
+            case "-":
+                alert("разность чисел а и b равна " + dif(a, b))
+                break;
+            case "*":
+                alert("произведение чисел а и b равно " + multi(a, b))
+                break;
+            case "/":
+                alert("Деление числа а на b равно " + div(a, b))
+                break;
+            default:
+                alert("Пожалуйста, укажите только оператор +, -, * или /")
+                break;
+
+        }
+
+    </script>
+</body>
+
+</html>
