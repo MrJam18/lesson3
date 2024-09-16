@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+</head>
+
+<body>
+    <script>
+        "use strict"
+        let number = +prompt("введите число от 1 до 999")
+        if (isNaN(number)) {
+            alert('вы ввели не число либо число не в диапазоне')
+        }
+        else {
+            let objectNumber = {
+                units: number % 10,
+                tens: math.floor(number / 10) % 10,
+                hundreds: math.floor(number / 100) % 10
+            }
+            console.log(objectNumber)
+        }
+
+    </script>
+</body>
+
+</html>
